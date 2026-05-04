@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Samuel Zaruba Smith — Speaking, Expert Witness, Consulting</title>
+<meta name="description" content="Dr. Samuel Zaruba Smith — faculty at the University of Kentucky's Gatton College of Business and Economics. Available for keynote speaking, expert witness engagements, and consulting in AI, cybersecurity, IT audit, financial services, and energy.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #1a1a1a;
+  --paper: #f7f4ed;
+  --paper-warm: #efeae0;
+  --rule: #c9c2b0;
+  --accent: #8b1a1a;
+  --muted: #6a6558;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter Tight', -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'ss01', 'cv11';
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 15%, rgba(139,26,26,0.015) 0%, transparent 40%),
+    radial-gradient(circle at 75% 85%, rgba(139,26,26,0.01) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main { position: relative; z-index: 1; }
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.masthead {
+  padding: 56px 0 40px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 56px;
+}
+
+.masthead-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+h1.name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(36px, 5.5vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  font-variation-settings: 'opsz' 144;
+}
+
+h1.name em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--accent);
+}
+
+.role {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.affiliation {
+  font-size: 15px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.bio {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 56px;
+  max-width: 64ch;
+}
+
+.bio p + p { margin-top: 16px; }
+
+.bio strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.section {
+  padding: 48px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.section:first-of-type { border-top: 1px solid var(--ink); }
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-label::before {
+  content: '§';
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  color: var(--accent);
+  font-style: italic;
+}
+
+h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 20px;
+}
+
+h2 em {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.section-intro {
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 60ch;
+  margin-bottom: 28px;
+}
+
+.topics {
+  list-style: none;
+  display: grid;
+  gap: 0;
+}
+
+.topics li {
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: baseline;
+}
+
+.topics li:last-child { border-bottom: 1px solid var(--rule); }
+
+.topic-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}
+
+.topic-title {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+  margin-bottom: 4px;
+}
+
+.topic-desc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.creds {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.cred-group h3 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.cred-group ul {
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cred-group li::before {
+  content: '— ';
+  color: var(--rule);
+}
+
+.contact-card {
+  background: var(--paper-warm);
+  padding: 40px;
+  margin: 64px 0 48px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.contact-card h2 {
+  margin-bottom: 8px;
+}
+
+.contact-card p {
+  color: var(--muted);
+  margin-bottom: 24px;
+  max-width: 56ch;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  align-items: baseline;
+  padding: 12px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.contact-row:last-child { border-bottom: 1px solid var(--rule); }
+
+.contact-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted);
+}
+
+.contact-value {
+  font-size: 15px;
+}
+
+.contact-value a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-value a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+footer {
+  padding: 40px 0 64px;
+  border-top: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+footer a {
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--rule);
+}
+
+footer a:hover { color: var(--accent); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.masthead, .bio, .section, .contact-card, footer {
+  animation: fadeUp 0.6s ease-out backwards;
+}
+
+.bio { animation-delay: 0.1s; }
+.section:nth-of-type(1) { animation-delay: 0.2s; }
+.section:nth-of-type(2) { animation-delay: 0.3s; }
+.section:nth-of-type(3) { animation-delay: 0.4s; }
+.section:nth-of-type(4) { animation-delay: 0.5s; }
+.contact-card { animation-delay: 0.6s; }
+
+@media (max-width: 600px) {
+  .masthead { padding: 32px 0 28px; margin-bottom: 36px; }
+  .section { padding: 36px 0; }
+  .contact-card { padding: 28px 24px; margin: 40px 0 32px; }
+  .contact-row { grid-template-columns: 90px 1fr; gap: 12px; }
+  .topics li { grid-template-columns: auto 1fr; gap: 14px; }
+}
+</style>
+</head>
+<body>
+<main>
+<div class="container">
+
+  <header class="masthead">
+    <div class="masthead-meta">
+      <span>Lexington · Kentucky</span>
+      <span>Est. 2026</span>
+    </div>
+    <h1 class="name">Samuel Zaruba <em>Smith</em>, Ph.D., MBA</h1>
+    <p class="role">Faculty · Researcher · Industry Practitioner</p>
+    <p class="affiliation">Gatton College of Business and Economics, University of Kentucky</p>
+  </header>
+
+  <section class="bio">
+    <p>
+      I work at the intersection of <strong>artificial intelligence, cybersecurity, financial services, and energy</strong>, with a research focus on AI governance, IT audit, and emerging-technology risk. My work bridges the gap between deeply technical systems and the institutions that have to deploy, audit, and regulate them.
+    </p>
+    <p>
+      Before joining the University of Kentucky, I spent two decades in industry and federal research, including roles at <strong>Microsoft, Amazon Web Services, AT&amp;T, PwC, and Bank of America</strong>, with research engagements through <strong>NSF and NIST</strong>. That combined vantage point of practitioner, auditor, and academic now informs how I approach the questions courts, conferences, and clients bring to me.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-label">01 — Keynote Speaking</div>
+    <h2>Speaking <em>engagements</em></h2>
+    <p class="section-intro">
+      I deliver keynote addresses and invited talks for conferences, executive audiences, and university programs on the topics where my research and industry experience converge. Recent themes:
+    </p>
+    <ol class="topics">
+      <li>
+        <span class="topic-num">i.</span>
+        <div>
+          <div class="topic-title">Where the Next Decade of AI Will Actually Get Built</div>
+          <div class="topic-desc">Why the next decade of AI policy and infrastructure won't be written in San Francisco, and what enterprises in the rest of the country should be doing now.</div>
+        </div>
+      </li>
+      <li>
+        <span class="topic-num">ii.</span>
+        <div>
+          <div class="topic-title">The Auditor's Problem with Generative AI</div>
+          <div class="topic-desc">How AI is breaking traditional IT audit frameworks, and the practical controls institutions actually need to implement.</div>
+        </div>
+      </li>
+      <li>
+        <span class="topic-num">iii.</span>
+        <div>
+          <div class="topic-title">From Compliance to Capability</div>
+          <div class="topic-desc">Why financial-services, energy, and government leaders should treat cybersecurity automation as a strategic advantage, not a checkbox.</div>
+        </div>
+      </li>
+      <li>
+        <span class="topic-num">iv.</span>
+        <div>
+          <div class="topic-title">Custom Topics</div>
+          <div class="topic-desc">Talks tailored to your audience, drawing on twenty years of industry, federal research, and academic work.</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <div class="section-label">02 — Litigation Support</div>
+    <h2>Expert <em>witness</em> &amp; consulting</h2>
+    <p class="section-intro">
+      I accept a limited number of expert witness and litigation consulting engagements per year. My areas of testimony and consulting expertise include:
+    </p>
+    <div class="creds">
+      <div class="cred-group">
+        <h3>Technical Areas</h3>
+        <ul>
+          <li>Artificial intelligence systems</li>
+          <li>Machine learning model behavior</li>
+          <li>Blockchain and distributed ledger</li>
+          <li>Cloud security architecture</li>
+          <li>Cybersecurity controls</li>
+        </ul>
+      </div>
+      <div class="cred-group">
+        <h3>Regulatory &amp; Industry</h3>
+        <ul>
+          <li>IT audit (SOX, SOC 2)</li>
+          <li>Financial services technology</li>
+          <li>Banking systems &amp; controls</li>
+          <li>Federal compliance frameworks</li>
+          <li>Data governance</li>
+          <li>Energy &amp; public utilities</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-label">03 — Advisory</div>
+    <h2>Consulting &amp; <em>fractional</em> roles</h2>
+    <p class="section-intro">
+      I selectively take on consulting engagements and fractional executive roles where my combination of technical depth and institutional experience creates real leverage. Typical engagements:
+    </p>
+    <ol class="topics">
+      <li>
+        <span class="topic-num">i.</span>
+        <div>
+          <div class="topic-title">AI Strategy &amp; Governance Advisory</div>
+          <div class="topic-desc">For boards and executive teams navigating AI adoption, vendor evaluation, and governance design.</div>
+        </div>
+      </li>
+      <li>
+        <span class="topic-num">ii.</span>
+        <div>
+          <div class="topic-title">Fractional Chief AI / Information Security Officer</div>
+          <div class="topic-desc">For mid-market companies that need senior technical leadership without a full-time hire.</div>
+        </div>
+      </li>
+      <li>
+        <span class="topic-num">iii.</span>
+        <div>
+          <div class="topic-title">Federal &amp; Defense Sector Advisory</div>
+          <div class="topic-desc">Helping firms navigate FedRAMP, ATO, and federal procurement processes for AI and cybersecurity products.</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <div class="section-label">04 — Academic Profile</div>
+    <h2>Research &amp; <em>publications</em></h2>
+    <p class="section-intro">
+      My peer-reviewed research spans artificial intelligence, blockchain, IT audit, and information systems. A complete publication list and citation record is maintained on Google Scholar.
+    </p>
+    <div class="contact-grid">
+      <div class="contact-row">
+        <span class="contact-label">Scholar</span>
+        <span class="contact-value"><a href="https://scholar.google.com/citations?user=7eBpXGsAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar profile</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">University</span>
+        <span class="contact-value"><a href="https://gatton.uky.edu/people/samuel-zaruba" target="_blank" rel="noopener">UK Gatton faculty page</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value"><a href="https://www.linkedin.com/in/samuelzarubaphd/" target="_blank" rel="noopener">linkedin.com/in/samuelzarubaphd</a></span>
+      </div>
+    </div>
+  </section>
+
+  <aside class="contact-card">
+    <div class="section-label">Inquiries</div>
+    <h2>Get in <em>touch</em></h2>
+    <p>For speaking inquiries, expert witness intake, or consulting engagements, please reach out by email with the nature of the engagement, timeline, and audience or jurisdiction. I respond personally to qualified inquiries within five business days.</p>
+    <div class="contact-grid">
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:samuel.zaruba.smith@gmail.com">samuel.zaruba.smith@gmail.com</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Lexington, KY · Available nationally</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Response</span>
+        <span class="contact-value">Within five business days</span>
+      </div>
+    </div>
+  </aside>
+
+  <footer>
+    <span>© 2026 Samuel Zaruba Smith. All rights reserved.</span>
+    <span>Co-founder, <a href="https://cheeki.io">Cheeki.io</a></span>
+  </footer>
+
+</div>
+</main>
+</body>
+</html>
