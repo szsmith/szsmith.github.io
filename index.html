@@ -3,8 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samuel Zaruba Smith, PhD, MBA — Faculty, Researcher, Founder</title>
+<title>Samuel Zaruba Smith, PhD, MBA · Faculty, Researcher, Founder</title>
 <meta name="description" content="Dr. Samuel Zaruba Smith, faculty at the University of Kentucky Gatton College of Business and Economics. Host of the Professor Z Podcast. Co-founder of Cheeki. Research and writing on artificial intelligence, cybersecurity, federal compliance, and critical infrastructure.">
+
+<link rel="canonical" href="https://szsmith.github.io/">
+
+<!-- Open Graph (LinkedIn, Facebook, Slack, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Samuel Zaruba Smith">
+<meta property="og:title" content="Samuel Zaruba Smith, PhD, MBA">
+<meta property="og:description" content="Faculty at the University of Kentucky Gatton College, co-founder of Cheeki, and host of the Professor Z Podcast. Research and writing on AI governance, federal compliance, and critical infrastructure.">
+<meta property="og:url" content="https://szsmith.github.io/">
+<meta property="og:image" content="https://szsmith.github.io/HeadShot.png">
+<meta property="og:image:alt" content="Samuel Zaruba Smith headshot">
+<meta property="og:locale" content="en_US">
+
+<!-- Favicon: inline SVG, no external file needed -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23f5f0e6'/><text x='50' y='74' font-family='Cormorant Garamond, Georgia, serif' font-size='78' font-weight='600' text-anchor='middle' fill='%237a3b2e' font-style='italic'>Z</text></svg>">
+
+<!-- Structured data: Person schema for search engines -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Samuel Zaruba Smith",
+  "honorificSuffix": "PhD, MBA",
+  "url": "https://szsmith.github.io/",
+  "image": "https://szsmith.github.io/HeadShot.png",
+  "jobTitle": "Faculty, Assistant Director of the Center for Business Data Analytics",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "University of Kentucky Gatton College of Business and Economics",
+    "url": "https://gatton.uky.edu"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/samuelzarubaphd/",
+    "https://scholar.google.com/citations?user=7eBpXGsAAAAJ&hl=en",
+    "https://gatton.uky.edu/people/samuel-zaruba"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -302,10 +341,13 @@
   }
 
   .podcast-topics li::before {
-    content: "—";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--accent);
+    top: 0.85em;
+    width: 14px;
+    height: 1px;
+    background-color: var(--accent);
   }
 
   /* Numbered items (speaking) */
@@ -567,7 +609,7 @@
 
 <div class="top-strip">
   <div class="container top-strip-inner">
-    <span>Lexington · Kentucky · Est. 2026</span>
+    <span>Est. 2026</span>
     <span>Faculty · Researcher · Founder</span>
   </div>
 </div>
@@ -593,14 +635,14 @@
 
     <div class="hero-photo-wrap">
       <img class="hero-photo" src="HeadShot.png" alt="Samuel Zaruba Smith headshot">
-      <div class="hero-photo-caption">Lexington, Kentucky</div>
+      <div class="hero-photo-caption">January 2026</div>
     </div>
   </div>
 </section>
 
 <section class="section" id="podcast">
   <div class="container">
-    <div class="section-label">01 — Podcast</div>
+    <div class="section-label">01 · Podcast</div>
     <h2 class="section-title">The <em>Professor Z</em> Podcast</h2>
 
     <div class="podcast-card">
@@ -642,7 +684,7 @@
 
 <section class="section" id="speaking">
   <div class="container">
-    <div class="section-label">02 — Speaking</div>
+    <div class="section-label">02 · Speaking</div>
     <h2 class="section-title">Speaking <em>engagements</em></h2>
     <p class="section-intro">
       I deliver keynote addresses and invited talks for conferences, executive audiences, and university programs on the topics where my research and industry experience converge.
@@ -683,7 +725,7 @@
 
 <section class="section" id="research">
   <div class="container">
-    <div class="section-label">03 — Research &amp; Writing</div>
+    <div class="section-label">03 · Research &amp; Writing</div>
     <h2 class="section-title">Areas of <em>research</em></h2>
     <p class="section-intro">
       My peer-reviewed research focuses on the intersection of artificial intelligence, cybersecurity, and the regulated industries that have to deploy these systems. A complete publication list is maintained on Google Scholar.
@@ -758,7 +800,7 @@
 
 <section class="section" id="cheeki">
   <div class="container">
-    <div class="section-label">04 — Cheeki</div>
+    <div class="section-label">04 · Cheeki</div>
     <h2 class="section-title">Operating <em>work</em></h2>
 
     <div class="cheeki-block">
@@ -774,7 +816,7 @@
 
 <section class="section" id="connect">
   <div class="container">
-    <div class="section-label">05 — Connect</div>
+    <div class="section-label">05 · Connect</div>
     <h2 class="section-title">Get in <em>touch</em></h2>
     <p class="section-intro">
       For speaking inquiries, podcast guest suggestions, media requests, or research correspondence, please reach out by email. I respond personally to qualified inquiries within five business days.
@@ -786,8 +828,8 @@
         <div class="contact-block-value"><a href="mailto:samuel.zaruba.smith@gmail.com">samuel.zaruba.smith@gmail.com</a></div>
       </div>
       <div>
-        <div class="contact-block-label">Location</div>
-        <div class="contact-block-value">Lexington, KY<br><span style="font-size: 15px; font-style: italic; color: var(--muted);">Available nationally</span></div>
+        <div class="contact-block-label">Schedule</div>
+        <div class="contact-block-value">Eastern Time<br><span style="font-size: 15px; font-style: italic; color: var(--muted);">Available nationally</span></div>
       </div>
       <div>
         <div class="contact-block-label">Response</div>
