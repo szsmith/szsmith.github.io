@@ -431,6 +431,18 @@
     background-color: var(--accent);
   }
 
+  .venues-list a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .venues-list a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+  }
+
   /* Numbered items (speaking) */
   .item-list {
     list-style: none;
@@ -946,10 +958,11 @@
     </ul>
 
     <div class="venues-block">
-      <div class="venues-label">Recent venues, podcasts, and conferences</div>
+      <div class="venues-label">Selected venues, podcasts, and conferences</div>
       <ul class="venues-list">
-        <li>University of Kentucky Computational Summit (2024)</li>
-        <li>ISACA Podcast, "Topics in Emerging Technology, Governance and Ethics" (2023)</li>
+        <li><a href="https://theinnovatesummit.com/" target="_blank" rel="noopener">The Innovate Summit, Louisville</a> (May 2026)</li>
+        <li><a href="https://summit.ccs.uky.edu/ccs_summit/" target="_blank" rel="noopener">University of Kentucky Computational Summit</a> (2024)</li>
+        <li><a href="https://isacapodcast.podbean.com/e/topics-in-emerging-technology-governance-and-ethics/" target="_blank" rel="noopener">ISACA Podcast, "Topics in Emerging Technology, Governance and Ethics"</a> (2023)</li>
         <li>University of Washington Foster School of Business, Seattle Conference on Artificial Intelligence (2023)</li>
         <li>Data Science Connect (2023)</li>
         <li>Hyperledger Conference (2022)</li>
