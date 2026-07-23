@@ -4,29 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Samuel Zaruba Smith, PhD, MBA · Faculty, Researcher, Founder</title>
-<meta name="description" content="Dr. Samuel Zaruba Smith, faculty at the University of Kentucky Gatton College of Business and Economics. Lectures, speaking, and executive training on artificial intelligence, cybersecurity, federal compliance, and critical infrastructure.">
+<meta name="description" content="Dr. Samuel Zaruba Smith, faculty at the University of Kentucky Gatton College of Business and Economics. Free lectures on the Prof Z channel, plus executive training, consulting and development work on artificial intelligence, cybersecurity, and federal compliance. Contact me for price estimate at my email below.">
 <link rel="canonical" href="https://szsmith.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Samuel Zaruba Smith">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://szsmith.github.io/">
 <meta property="og:title" content="Samuel Zaruba Smith, PhD, MBA">
-<meta property="og:description" content="Faculty at the University of Kentucky Gatton College. Lectures, speaking, and executive training on AI governance, federal compliance, and critical infrastructure.">
+<meta property="og:description" content="Faculty at the University of Kentucky Gatton College. Free lectures, speaking, and executive training on AI governance, federal compliance, and critical infrastructure.">
 <meta property="og:image" content="https://szsmith.github.io/HeadShot.png">
 <meta property="og:image:alt" content="Samuel Zaruba Smith headshot">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FAF9F6;
-    --paper-deep:#F2F0EA;
-    --ink:#191919;
-    --ink-soft:#4A4A4A;
-    --muted:#77736C;
-    --rule:#DCD8CF;
-    --accent:#1C3D4A;
-    --accent-soft:#3D6070;
+    /* Blue palette */
+    --blue:#0A3D91;
+    --blue-deep:#002273;
+    --blue-tint:#EEF2FB;
+    --paper:#FFFFFF;
+    --paper-soft:#F7F8FB;
+    --ink:#14161A;
+    --ink-soft:#3D424C;
+    --muted:#5F6672;
+    --rule:#D9DEE9;
+
     --display:"Newsreader",Georgia,"Times New Roman",serif;
     --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
     --measure:64rem;
@@ -34,7 +37,6 @@
   }
 
   *,*::before,*::after{box-sizing:border-box;}
-
   html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
 
   @media (prefers-reduced-motion:reduce){
@@ -52,9 +54,9 @@
     -webkit-font-smoothing:antialiased;
   }
 
-  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(28,61,74,.28);transition:border-color .2s ease,color .2s ease;}
-  a:hover{border-bottom-color:var(--accent);}
-  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px;}
+  a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(0,51,160,.3);transition:border-color .2s ease,color .2s ease;}
+  a:hover{color:var(--blue-deep);border-bottom-color:var(--blue);}
+  a:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px;}
 
   .wrap{max-width:var(--measure);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter);}
 
@@ -63,14 +65,16 @@
     font-size:.7rem;
     letter-spacing:.16em;
     text-transform:uppercase;
-    color:var(--muted);
-    font-weight:500;
+    color:var(--blue);
+    font-weight:600;
     margin:0;
   }
 
   /* ---------- Masthead ---------- */
-  .masthead{padding:clamp(3rem,9vw,6rem) 0 clamp(2.5rem,6vw,4rem);}
-  .masthead .eyebrow{margin-bottom:2.25rem;}
+  .rule-top{height:6px;background:var(--blue);}
+
+  .masthead{padding:clamp(2.75rem,8vw,5rem) 0 clamp(2.5rem,6vw,3.75rem);}
+  .masthead .eyebrow{margin-bottom:2rem;}
 
   .name{
     font-family:var(--display);
@@ -78,18 +82,18 @@
     font-size:clamp(2.9rem,9vw,6rem);
     line-height:1.02;
     letter-spacing:-.02em;
-    margin:0 0 1.1rem;
+    margin:0 0 1rem;
+    color:var(--ink);
   }
-  .name em{font-style:italic;font-weight:300;}
+  .name em{font-style:italic;font-weight:300;color:var(--blue);}
 
   .credential-line{
-    font-family:var(--body);
     font-size:.78rem;
-    letter-spacing:.12em;
+    letter-spacing:.13em;
     text-transform:uppercase;
     color:var(--muted);
-    margin:0 0 2.5rem;
-    font-weight:500;
+    margin:0 0 2.25rem;
+    font-weight:600;
   }
 
   .affiliation{
@@ -98,57 +102,55 @@
     line-height:1.5;
     color:var(--ink-soft);
     margin:0 0 2.25rem;
+    padding-left:1.1rem;
+    border-left:3px solid var(--blue);
   }
 
   .lede{
     font-family:var(--display);
-    font-size:clamp(1.15rem,2.4vw,1.4rem);
-    line-height:1.55;
+    font-size:clamp(1.12rem,2.3vw,1.35rem);
+    line-height:1.58;
     max-width:38em;
-    margin:0 0 1.5rem;
-    color:var(--ink);
+    margin:0 0 1.4rem;
   }
   .lede strong{font-weight:500;}
 
   .masthead-grid{display:grid;grid-template-columns:1fr;gap:clamp(2rem,5vw,3.5rem);align-items:start;}
-  @media (min-width:56rem){
-    .masthead-grid{grid-template-columns:1fr 15rem;}
-  }
+  @media (min-width:56rem){.masthead-grid{grid-template-columns:1fr 15rem;}}
+
   .portrait{
     width:100%;
     max-width:15rem;
     height:auto;
     display:block;
-    border:1px solid var(--rule);
-    filter:grayscale(100%) contrast(1.04);
+    border-top:5px solid var(--blue);
+    filter:grayscale(100%) contrast(1.05);
   }
 
-  /* ---------- Ledger strip ---------- */
-  .ledger{
-    border-top:1px solid var(--ink);
-    border-bottom:1px solid var(--rule);
-    padding:2.25rem 0;
-  }
-  .ledger-grid{display:grid;grid-template-columns:1fr;gap:1.75rem;}
+  /* ---------- Ledger (blue band) ---------- */
+  .ledger{background:var(--blue);color:#fff;padding:clamp(2.25rem,5vw,3rem) 0;}
+  .ledger-grid{display:grid;grid-template-columns:1fr;gap:1.9rem;}
   @media (min-width:40rem){.ledger-grid{grid-template-columns:repeat(2,1fr);}}
-  @media (min-width:64rem){.ledger-grid{grid-template-columns:repeat(4,1fr);gap:2rem;}}
+  @media (min-width:64rem){.ledger-grid{grid-template-columns:repeat(4,1fr);gap:2.25rem;}}
 
-  .ledger-item .eyebrow{margin-bottom:.55rem;}
+  .ledger-item .eyebrow{color:rgba(255,255,255,.72);margin-bottom:.6rem;}
   .ledger-item h3{
     font-family:var(--display);
     font-weight:400;
     font-size:1.02rem;
     line-height:1.35;
-    margin:0 0 .4rem;
+    margin:0 0 .45rem;
+    color:#fff;
   }
-  .ledger-item p{margin:0;font-size:.86rem;line-height:1.55;color:var(--muted);}
+  .ledger-item p{margin:0;font-size:.85rem;line-height:1.55;color:rgba(255,255,255,.8);}
 
   /* ---------- Sections ---------- */
-  .section{padding:clamp(3.5rem,8vw,6rem) 0;border-bottom:1px solid var(--rule);}
+  .section{padding:clamp(3.25rem,7.5vw,5.5rem) 0;border-bottom:1px solid var(--rule);}
   .section:last-of-type{border-bottom:none;}
+  .section.tinted{background:var(--paper-soft);}
 
-  .section-head{margin-bottom:clamp(2rem,4vw,3rem);}
-  .section-head .eyebrow{margin-bottom:1rem;}
+  .section-head{margin-bottom:clamp(2rem,4vw,2.75rem);}
+  .section-head .eyebrow{margin-bottom:.9rem;}
   .section-title{
     font-family:var(--display);
     font-weight:300;
@@ -157,164 +159,131 @@
     letter-spacing:-.015em;
     margin:0;
   }
-  .section-title em{font-style:italic;}
+  .section-title em{font-style:italic;color:var(--blue);}
   .section-intro{
     font-family:var(--display);
     font-size:1.08rem;
     line-height:1.6;
     color:var(--ink-soft);
     max-width:36em;
-    margin:1.25rem 0 0;
+    margin:1.15rem 0 0;
   }
+
+  .label{
+    font-size:.7rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--blue);
+    font-weight:600;
+    margin:0 0 1.4rem;
+  }
+  .label.spaced{margin-top:clamp(2.75rem,5vw,3.75rem);}
 
   /* ---------- Video ---------- */
   .video-frame{
     position:relative;
     width:100%;
     aspect-ratio:16/9;
-    background:var(--paper-deep);
+    background:var(--blue-tint);
     border:1px solid var(--rule);
+    border-top:4px solid var(--blue);
     overflow:hidden;
   }
   .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 
   .video-placeholder{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:2rem;
-    gap:.6rem;
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    text-align:center;padding:2rem;gap:.7rem;
   }
-  .video-placeholder .eyebrow{color:var(--accent-soft);}
-  .video-placeholder p{
+  .video-placeholder p.msg{
     font-family:var(--display);
     font-size:1.05rem;
     color:var(--ink-soft);
-    margin:0;
-    max-width:26em;
+    margin:0;max-width:26em;
   }
 
   .video-caption{
-    display:flex;
-    flex-wrap:wrap;
-    gap:.5rem 1.75rem;
-    align-items:baseline;
-    margin-top:1.25rem;
-    padding-top:1.25rem;
+    display:flex;flex-wrap:wrap;
+    gap:.5rem 1.75rem;align-items:baseline;
+    margin-top:1.15rem;padding-top:1.15rem;
     border-top:1px solid var(--rule);
   }
   .video-caption h3{
     font-family:var(--display);
-    font-weight:400;
-    font-size:1.15rem;
-    margin:0;
-    flex:1 1 20rem;
+    font-weight:400;font-size:1.15rem;
+    margin:0;flex:1 1 20rem;
   }
   .video-caption .meta{font-size:.82rem;color:var(--muted);margin:0;}
 
-  .channel-note{
-    margin-top:2.5rem;
-    padding:1.5rem 1.75rem;
-    background:var(--paper-deep);
-    border-left:2px solid var(--accent);
+  .callout{
+    margin-top:2.25rem;
+    padding:1.4rem 1.65rem;
+    background:var(--blue-tint);
+    border-left:4px solid var(--blue);
   }
-  .channel-note p{margin:0;font-size:.95rem;line-height:1.6;color:var(--ink-soft);}
+  .callout p{margin:0;font-size:.95rem;line-height:1.62;color:var(--ink-soft);}
+  .callout p + p{margin-top:.7rem;}
 
-  .podcast-block{margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:clamp(2rem,4vw,2.75rem);border-top:1px solid var(--rule);}
-  .podcast-block h3{
-    font-family:var(--display);
-    font-weight:300;
-    font-size:1.6rem;
-    margin:.85rem 0 .75rem;
-  }
-  .podcast-block h3 em{font-style:italic;}
-  .podcast-quote{
-    font-family:var(--display);
-    font-style:italic;
-    font-size:1.05rem;
-    color:var(--ink-soft);
-    max-width:34em;
-    margin:0 0 1rem;
-  }
-  .podcast-block p.status{font-size:.85rem;color:var(--muted);margin:1rem 0 0;}
-
-  /* ---------- Lists ---------- */
+  /* ---------- Cards ---------- */
   .stack{display:grid;gap:1.5rem;}
   @media (min-width:48rem){.stack.two{grid-template-columns:repeat(2,1fr);gap:2rem 2.5rem;}}
 
-  .card{
-    padding:1.6rem 0 0;
-    border-top:1px solid var(--rule);
-  }
+  .card{padding:1.5rem 0 0;border-top:2px solid var(--blue);}
   .card .num{
-    font-family:var(--body);
-    font-size:.7rem;
-    letter-spacing:.14em;
-    color:var(--accent-soft);
-    font-weight:600;
-    display:block;
-    margin-bottom:.6rem;
+    font-size:.7rem;letter-spacing:.14em;
+    color:var(--blue);font-weight:700;
+    display:block;margin-bottom:.55rem;
+    text-transform:uppercase;
   }
   .card h3{
     font-family:var(--display);
-    font-weight:400;
-    font-size:1.18rem;
-    line-height:1.35;
-    margin:0 0 .6rem;
+    font-weight:400;font-size:1.18rem;
+    line-height:1.35;margin:0 0 .55rem;
   }
   .card p{margin:0;font-size:.93rem;line-height:1.6;color:var(--ink-soft);}
-  .card p + p{margin-top:.75rem;}
   .card .format{
-    display:block;
-    margin-top:.85rem;
-    font-family:var(--body);
-    font-size:.76rem;
-    letter-spacing:.09em;
-    text-transform:uppercase;
-    color:var(--muted);
-    font-weight:500;
+    display:block;margin-top:.85rem;
+    font-size:.75rem;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--muted);font-weight:600;
   }
 
-  /* ---------- Venue / publication lists ---------- */
-  .listing{margin:clamp(2.25rem,4vw,3rem) 0 0;padding:0;list-style:none;}
+  /* ---------- Listings ---------- */
+  .listing{margin:clamp(2rem,4vw,2.75rem) 0 0;padding:0;list-style:none;}
   .listing li{
-    padding:.95rem 0;
-    border-top:1px solid var(--rule);
-    display:grid;
-    gap:.2rem .5rem;
+    padding:.9rem 0;border-top:1px solid var(--rule);
+    display:grid;gap:.2rem .5rem;
   }
-  @media (min-width:44rem){
-    .listing li{grid-template-columns:1fr auto;align-items:baseline;}
-  }
-  .listing .source{font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:500;}
+  @media (min-width:44rem){.listing li{grid-template-columns:1fr auto;align-items:baseline;}}
+  .listing .source{font-size:.74rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-weight:600;}
   .listing .item{font-family:var(--display);font-size:1.02rem;line-height:1.45;}
   .listing.venues li{grid-template-columns:1fr;}
 
   /* ---------- Ventures ---------- */
-  .venture{padding-top:1.6rem;border-top:1px solid var(--rule);}
-  .venture .role{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;margin:0 0 .5rem;}
-  .venture h3{font-family:var(--display);font-weight:300;font-size:1.75rem;margin:0 0 .75rem;}
-  .venture h3 em{font-style:italic;}
-  .venture p{margin:0 0 1rem;font-size:.95rem;line-height:1.62;color:var(--ink-soft);}
+  .venture{padding-top:1.5rem;border-top:2px solid var(--blue);}
+  .venture .role{font-size:.74rem;letter-spacing:.11em;text-transform:uppercase;color:var(--blue);font-weight:600;margin:0 0 .5rem;}
+  .venture h3{font-family:var(--display);font-weight:300;font-size:1.7rem;margin:0 0 .7rem;}
+  .venture h3 em{font-style:italic;color:var(--blue);}
+  .venture p{margin:0 0 .9rem;font-size:.95rem;line-height:1.62;color:var(--ink-soft);}
+  .venture p:last-child{margin-bottom:0;}
 
   /* ---------- Contact ---------- */
-  .contact-grid{display:grid;gap:2rem;margin-top:2.5rem;}
-  @media (min-width:44rem){.contact-grid{grid-template-columns:repeat(3,1fr);gap:2.5rem;}}
-  .contact-item{border-top:1px solid var(--rule);padding-top:1.25rem;}
-  .contact-item .eyebrow{margin-bottom:.6rem;}
+  .contact-grid{display:grid;gap:1.75rem;margin-top:2.25rem;}
+  @media (min-width:44rem){.contact-grid{grid-template-columns:repeat(3,1fr);gap:2.25rem;}}
+  .contact-item{border-top:2px solid var(--blue);padding-top:1.15rem;}
+  .contact-item .eyebrow{margin-bottom:.55rem;}
   .contact-item p{margin:0;font-family:var(--display);font-size:1.02rem;line-height:1.5;}
   .contact-item a{font-size:1.02rem;word-break:break-word;}
 
   /* ---------- Footer ---------- */
-  footer{padding:2.5rem 0 3.5rem;border-top:1px solid var(--ink);}
+  footer{background:var(--blue);color:#fff;padding:2.25rem 0 2.75rem;}
   .footer-inner{display:flex;flex-wrap:wrap;gap:1rem 2rem;justify-content:space-between;align-items:baseline;}
-  footer p{margin:0;font-size:.8rem;color:var(--muted);}
+  footer p{margin:0;font-size:.8rem;color:rgba(255,255,255,.78);}
   .footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;}
-  .footer-links a{font-size:.8rem;}
+  footer a{color:#fff;border-bottom-color:rgba(255,255,255,.45);font-size:.8rem;}
+  footer a:hover{color:#fff;border-bottom-color:#fff;}
+  footer a:focus-visible{outline:2px solid #fff;outline-offset:3px;}
 
   .visually-hidden{
     position:absolute;width:1px;height:1px;padding:0;margin:-1px;
@@ -325,6 +294,8 @@
 <body>
 
 <a href="#main" class="visually-hidden">Skip to main content</a>
+
+<div class="rule-top"></div>
 
 <!-- ============ MASTHEAD ============ -->
 <header class="masthead">
@@ -348,7 +319,7 @@
         </p>
 
         <p class="lede">
-          Before joining the University of Kentucky, I spent two decades in industry and federal research, including roles at <strong>Microsoft, Amazon Web Services, Bank of America, PwC, Duke Energy, and PG&amp;E</strong>. That combined vantage point of practitioner, auditor, and academic now informs how I teach, write, and host the <strong>Professor Z Podcast</strong>.
+          Before joining the University of Kentucky, I spent two decades in industry and federal research, including roles at <strong>Microsoft, Amazon Web Services, Bank of America, PwC, Duke Energy, and PG&amp;E</strong>. That combined vantage point of practitioner, auditor, and academic now informs how I teach, write, and advise.
         </p>
       </div>
 
@@ -369,7 +340,7 @@
       <div class="ledger-item">
         <p class="eyebrow">Research</p>
         <h3>NSF-funded doctoral research</h3>
-        <p>Adversarial AI and large language model security</p>
+        <p>Adversarial AI, Data Security, Privacy, Anomaly Detection, and large language model security</p>
       </div>
       <div class="ledger-item">
         <p class="eyebrow">Practice</p>
@@ -378,7 +349,7 @@
       </div>
       <div class="ledger-item">
         <p class="eyebrow">Education</p>
-        <h3>PhD, Public Policy and Economics · MBA</h3>
+        <h3>PhD, Public Policy and Economics · MBA · Accounting Information Systems</h3>
         <p>Faculty and Associate Director, UK Gatton Center for Business Data Analytics</p>
       </div>
     </div>
@@ -387,21 +358,21 @@
 
 <main id="main">
 
-<!-- ============ 01 · WATCH AND LISTEN ============ -->
-<section class="section" id="watch">
+<!-- ============ 01 · THE PROF Z CHANNEL ============ -->
+<section class="section" id="lectures">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">01 · Watch and Listen</p>
-      <h2 class="section-title">Lectures and <em>conversations</em></h2>
+      <p class="eyebrow">01 · The Prof Z Channel</p>
+      <h2 class="section-title">Full lectures, <em>free</em></h2>
       <p class="section-intro">
-        Full-length teaching sessions on artificial intelligence for accounting, finance, and audit professionals, published free. No prerequisites and no coding background required.
+        Complete teaching sessions on artificial intelligence for accounting, finance, and audit professionals. The same material I teach in graduate and executive courses, published in full. No prerequisites and no coding background required.
       </p>
     </div>
 
     <!--
       ===========================================================
       YOUTUBE EMBED
-      Replace the entire .video-placeholder block below with:
+      Replace the entire <div class="video-placeholder"> block below with:
 
       <iframe
         src="https://www.youtube.com/embed/VIDEO_ID"
@@ -417,7 +388,7 @@
     <div class="video-frame">
       <div class="video-placeholder">
         <p class="eyebrow">Publishing soon</p>
-        <p>Part 1, Foundations of AI and Generative Models for Accounting and Financial Professionals. The video will appear here when the channel goes live.</p>
+        <p class="msg">Part 1, Foundations of AI and Generative Models for Accounting and Financial Professionals. The video will appear here when the channel goes live.</p>
       </div>
     </div>
 
@@ -426,34 +397,42 @@
       <p class="meta">Part 1 of 3 &nbsp;·&nbsp; Full lecture</p>
     </div>
 
-    <div class="channel-note">
-      <!--
-        Once the channel exists, replace this paragraph with:
-        <p>New lectures publish regularly. <a href="YOUR_CHANNEL_URL">Subscribe on YouTube</a> to get them as they go up, or <a href="mailto:SigmaStarLLC@gmail.com">email me</a> to be notified directly.</p>
-      -->
-      <p>New lectures publish regularly on the course series covering AI evolution, practical applications, and governance and strategy for finance and accounting teams. Channel link coming shortly. In the meantime, <a href="mailto:SigmaStarLLC@gmail.com?subject=Notify%20me%20when%20lectures%20go%20live">email me</a> and I will let you know when the first videos are live.</p>
+    <p class="label spaced">What the series covers</p>
+    <div class="stack two">
+      <div class="card">
+        <span class="num">Part 1</span>
+        <h3>Foundations</h3>
+        <p>How AI evolved from statistical modeling through machine learning to generative systems, and what large language models actually do under the hood. Built for a non-technical audience.</p>
+      </div>
+      <div class="card">
+        <span class="num">Part 2</span>
+        <h3>Applications</h3>
+        <p>Practical use cases, hands-on development, and project management considerations for adopting AI tooling inside a finance or accounting function.</p>
+      </div>
+      <div class="card">
+        <span class="num">Part 3</span>
+        <h3>Governance and Strategy</h3>
+        <p>AI ethics, governance of AI and IT systems, compliance obligations, and organizational strategy for adoption that survives an audit.</p>
+      </div>
+      <div class="card">
+        <span class="num">Also on the channel</span>
+        <h3>Analytics, automation, and blockchain</h3>
+        <p>Graduate data analytics coursework plus private-sector sessions on robotic process automation, applied AI, and blockchain smart contracts.</p>
+      </div>
     </div>
 
-    <div class="podcast-block">
-      <p class="eyebrow">Also coming in 2026</p>
-      <h3>The Professor Z <em>Podcast</em></h3>
-      <p class="podcast-quote">"Conversations in AI, governance, compliance, and the systems running quietly behind everything."</p>
-      <p style="font-size:.95rem;line-height:1.62;color:var(--ink-soft);margin:0 0 1rem;">
-        A long-form interview show with founders, federal officials, researchers, and operators working in artificial intelligence, government technology, and critical infrastructure. New episodes every other week.
-      </p>
-      <ul class="listing" style="margin-top:1.25rem;">
-        <li><span class="item">AI governance across federal, state, and local government</span></li>
-        <li><span class="item">Federal AI compliance frameworks and what they get wrong</span></li>
-        <li><span class="item">Critical infrastructure cybersecurity at the energy, healthcare, and financial system boundary</span></li>
-        <li><span class="item">Founders building inside government markets, and the operators they sell to</span></li>
-      </ul>
-      <p class="status">Launching 2026. Subscribe links will appear here when the feed is live.</p>
+    <div class="callout">
+      <!--
+        Once the channel exists, replace this paragraph with:
+        <p>New lectures publish regularly. <a href="YOUR_CHANNEL_URL">Subscribe to the Prof Z channel</a> to get them as they go up.</p>
+      -->
+      <p>New lectures publish regularly. The channel link will appear here shortly. In the meantime, <a href="mailto:SigmaStarLLC@gmail.com?subject=Notify%20me%20when%20lectures%20go%20live">email me</a> and I will let you know when the first videos are live.</p>
     </div>
   </div>
 </section>
 
 <!-- ============ 02 · SPEAKING AND TRAINING ============ -->
-<section class="section" id="speaking">
+<section class="section tinted" id="speaking">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">02 · Speaking and Training</p>
@@ -463,7 +442,7 @@
       </p>
     </div>
 
-    <p class="eyebrow" style="margin-bottom:1.5rem;">Keynotes and invited talks</p>
+    <p class="label">Keynotes and invited talks</p>
     <div class="stack two">
       <div class="card">
         <span class="num">i</span>
@@ -487,7 +466,7 @@
       </div>
     </div>
 
-    <p class="eyebrow" style="margin:clamp(2.75rem,5vw,4rem) 0 1.5rem;">Executive and professional training</p>
+    <p class="label spaced">Executive and professional training</p>
     <div class="stack two">
       <div class="card">
         <h3>AI Governance for Audit and Assurance</h3>
@@ -511,12 +490,12 @@
       </div>
     </div>
 
-    <div class="channel-note" style="margin-top:clamp(2.5rem,5vw,3.5rem);">
+    <div class="callout">
       <p><strong>To discuss a keynote, workshop, or training program</strong>, email <a href="mailto:SigmaStarLLC@gmail.com?subject=Speaking%20or%20training%20inquiry">SigmaStarLLC@gmail.com</a> with your audience, approximate dates, and format. I respond personally to qualified inquiries within five business days.</p>
     </div>
 
-    <p class="eyebrow" style="margin:clamp(2.75rem,5vw,4rem) 0 0;">Selected venues, podcasts, and conferences</p>
-    <ul class="listing venues">
+    <p class="label spaced">Selected venues and conferences</p>
+    <ul class="listing venues" style="margin-top:0;">
       <li><span class="item"><a href="https://theinnovatesummit.com/">The Innovate Summit, Louisville</a> (May 2026)</span></li>
       <li><span class="item"><a href="https://summit.ccs.uky.edu/ccs_summit/">University of Kentucky Computational Summit</a> (2024)</span></li>
       <li><span class="item"><a href="https://isacapodcast.podbean.com/e/topics-in-emerging-technology-governance-and-ethics/">ISACA Podcast, Topics in Emerging Technology, Governance and Ethics</a> (2023)</span></li>
@@ -599,7 +578,7 @@
       </li>
     </ul>
 
-    <div class="venture" style="margin-top:clamp(2.5rem,5vw,3.5rem);">
+    <div class="venture" style="margin-top:clamp(2.25rem,4.5vw,3rem);">
       <p class="role">In progress</p>
       <h3>A forthcoming book on AI's impact on <em>social engineering</em> and <em>cybersecurity</em></h3>
       <p>Drawing on faculty research, anonymized case patterns from practice, and a decade across regulated sectors. Working title and release date not yet finalized.</p>
@@ -608,7 +587,7 @@
 </section>
 
 <!-- ============ 04 · OPERATING WORK ============ -->
-<section class="section" id="operating">
+<section class="section tinted" id="operating">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow">04 · Operating Work</p>
@@ -621,45 +600,23 @@
       <p>Cheeki develops automated compliance and governance technology for artificial intelligence systems deployed in regulated enterprise environments. Its flagship product, ClearPath AI, accelerates authorization and assessment workflows through NIST Risk Management Framework automation.</p>
       <p><a href="https://cheeki.io">Learn more at cheeki.io</a></p>
     </div>
-  </div>
-</section>
 
-<!-- ============ 05 · ADVISOR ============ -->
-<section class="section" id="advisor">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">05 · Advisor</p>
-      <h2 class="section-title">Strategic <em>advisor</em></h2>
-      <p class="section-intro">
-        I work with a small number of founders building in artificial intelligence, governance, and adjacent regulated industries. Material involvement, not surface-level consulting.
-      </p>
-    </div>
-
-    <div class="stack two">
-      <div class="venture">
-        <p class="role">Strategic Advisor</p>
-        <h3>Empromptu<em>.ai</em></h3>
-        <p>Enterprise AI application platform that ships production-ready custom AI apps with SOC 2 and HIPAA compliance built in from day one.</p>
-        <p><a href="https://empromptu.ai">empromptu.ai</a></p>
-      </div>
-      <div class="venture">
-        <p class="role">Strategic Advisor</p>
-        <h3>Paper<em>2Audio</em></h3>
-        <p>AI-powered audio reader for research papers, PDFs, EPUBs, and web content, with intelligent parsing of complex formatting, tables, and equations.</p>
-        <p><a href="https://paper2audio.com">paper2audio.com</a></p>
-      </div>
+    <div class="venture" style="margin-top:clamp(2rem,4vw,2.5rem);">
+      <p class="role">Advisory</p>
+      <h3>Early-stage <em>startups</em></h3>
+      <p>I have served as a strategic advisor to early-stage companies building in artificial intelligence, governance, and adjacent regulated industries. Material involvement, not surface-level consulting.</p>
     </div>
   </div>
 </section>
 
-<!-- ============ 06 · CONNECT ============ -->
+<!-- ============ 05 · CONNECT ============ -->
 <section class="section" id="connect">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">06 · Connect</p>
+      <p class="eyebrow">05 · Connect</p>
       <h2 class="section-title">Get in <em>touch</em></h2>
       <p class="section-intro">
-        For speaking engagements, training and workshop programs, podcast guest suggestions, media requests, or research correspondence, email me directly. I respond personally to qualified inquiries within five business days.
+        For speaking engagements, training and workshop programs, media requests, or research correspondence, email me directly. I respond personally to qualified inquiries within five business days.
       </p>
     </div>
 
